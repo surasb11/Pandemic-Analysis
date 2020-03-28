@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta property="og:title" content="World Pandemic Analysis">
+		<meta property="og:image" content="image/virus.jpg">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+		<title>Pandemic Analysis</title>
+		<link rel="icon" href="images/virus-icon.png">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		
+
+		<link rel="stylesheet" href="static/css/ebola-style.css">
+	</head>
+
+<body>
+
+<div class="wrapper">
+
+
+	<!-------------- Navigation Bar  ---------------->
+	<nav class="navbar navbar-expand-lg navbar-expand navbar-white flex-column flex-md-row navbar-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarCollapse" aria-controls="navbarCollapse navbarNavDropdown" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		 <a class="navbar-brand nav-link active nav-item" id="btn-nvg" href="index.html" src="https://i.ya-webdesign.com/images/virus-transparent-animated-gif.gif"></a>
+		
+		
+		<div class="collapse justify-content-end navbar-collapse navbar-collapse collapse show">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item dropdown" id="navbarCollapse">
+					<a class="nav-link active dropdown-toggle" href="#" id="navbarPlot" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore<span class="sr-only">(current)</span></a>
+					
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="COVID.html">COVID-19</a>
+							
+				<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="Map.html">COVID-19 Map</a>
+					
+				<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="ebola-page.html">Ebola Virus Disease</a>
+
+				</li>
+					
+				<li class="nav-item">
+					<a class="nav-link active a" id="navbarRight" href="live-update.html">Live Update</a>
+				</li>
+			</ul>
+		</div>
+	</nav>	
+
+
+
+	
+	<!--------------------EBOLA MAP---------------------->
+	<div class="container">
+		<div class="box" id="earthquakes-box">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="title">Ebola Virus Disease</h3>
+					<div id="21822d85-c13e-4df5-9f92-6a735ac42ddb" class="eb-map plotly-graph-div">
+						<p class="category a"> Ebola virus disease is an illness that affects humans and other primates, with an average mortality rate of 50%. The Ebola virus was first identified in 1976 in sub-Saharan Africa, and there are about 500 cases of the disease reported yearly. It is transmitted to humans from wild animals, and spreads among the human population by direct contact with bodily fluids of infected people or animals. The largest outbreak of the disease took place in west Africa during March 2014 to June 2016. About 11,315 people died in Liberia, Guinea, Sierra Leone, Nigeria the US and Mali, and the total number of reported cases was about 28,637.
+						</p>
+			<!--------------------Reference---------------------->				
+						<p class="a1">Retrieved from: 
+						<a href="https://www.who.int/health-topics/ebola/#tab=tab_1">World Health Organization (WHO)<a><br>
+						PLEASE NOTE:<br>
+						THIS PAGE SHOWS ONLY CONFIRMED CASES AND DEATHS.<br>
+						</p>
+					</div>
+				
+				<hr id="sizing-hr">
+
+	<!--------------------EBOLA Table---------------------->
+				<div class="col-lg-12">
+				<br>
+				<br>
+					<div class="comp-title">Overview of Cases and Deaths Over The Years
+					</div>
+					
+					<hr class="after-title">
+						<p class="category a">The following table displays the amount of confirmed cases and deaths for each country, and each year during the outbreak. West Africa had the highest amount of deaths, and the countries that highest amounts of confirmed cases were Liberia, Guinea and Sierra Leone. Other countries that were affected during this epidemic outbreak and had widespread transmission were the United States, the United Kingdom, Italy, Mali, Nigeria, Senegal, and Spain.
+						</p>
+						<div id="57d7c9f8-12f1-4367-b8a3-b18d45ac0715" class="plotly-graph-div plotly-a" style="height:450px; width:560px;">
+							<br>
+							<br>
+							<br>
+						</div>
+						<br>
+						<br>
+					</div>
+					<br>
+				</div>
+
+	<!--------------------EBOLA Table TOTAL---------------------->				<div class="col-lg-12">
+
+					<br>
+					
+					<div class="col-lg-12">
+						<div class="comp-title">Total Numbers of Cases and Deaths</div>
+					<hr class="after-title">
+					<br>
+				</div>
+			
+				<div class="row">
+						<div class="col-lg-12">
+							<img id="img1" src="images/total-ebola.png" alt="total-number" align="left">
+							<br>
+							<p id='textt'>On this table we can see total number of cases and deaths. The higher number of cases and deaths was in Sierra Leone.
+							<br>
+								For more information about (Suspected and Probable) Ebola Virus cases press here<a href="https://www.cdc.gov/vhf/ebola/history/2014-2016-outbreak/index.html" id="link-text">here</a>.
+							</p>
+					
+				<!-------<div id="c2543215-4270-4129-831a-97eaf16c651b" class="plotly-graph-div plotly-b" style="height:350px; width:450px;"> ------>
+							<br>
+							<br>
+							<br>
+						</div>
+					</div>
+				<hr id="sizing-hr">
+		
+
+<!--------------------EBOLA Graph---------------------->
+				<div class="col-lg-12">
+				<br>
+				<br>
+					
+					<div class="comp-title">Most Affected Countries
+					</div>
+					<hr class="after-title">
+						<p class="a">The following table displays the amount of confirmed cases and deaths for each country, and each year during the outbreak. West Africa had the highest amount of deaths, and the countries that highest amounts of confirmed cases were Liberia, Guinea and Sierra Leone. Other countries that were affected during this epidemic outbreak and had widespread transmission were the United States, the United Kingdom, Italy, Mali, Nigeria, Senegal, and Spain.
+						</p>
+				</div>
+				
+				<div class="col-md-5">
+					<div id="81877669-1166-4e4a-bc42-ee71a7ca73ae" class="plotly-graph-div plotly-c" style="height:450px; width:560px;"></div>
+				</div>
+				
+				<div class="col-md-5">
+					<div id="b9080b83-e360-42a3-996d-b373ee8da910" class="plotly-graph-div plotly-d" style="height:450px; width:560px;">
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<br>
+		<br>
+
+	
+<footer class="footer">
+	<span class="bottom">
+		<p style="font-size: 12px; ">© 2020 <br> Ebola - Data Vizualization</p>
+	</span>
+</footer>
+</div>
+</div>
+
+<script type="text/javascript" src="static/js/eb-table.js"></script>
+<script type="text/javascript" src="static/js/eb-table-total.js"></script>
+<script type="text/javascript" src="static/js/eb-map.js"></script>
+<script type="text/javascript" src="static/js/eb-num-cases.js"></script>
+<script type="text/javascript" src="static/js/eb-num-dth.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="static/js/data.js"></script>
+<script src="static/js/app.js"></script>
+</body>
+</html>
